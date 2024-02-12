@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { callpythonnapi } from './Services/allApi';
 
 function Pythonapi() {
@@ -6,6 +6,9 @@ function Pythonapi() {
         const res=await callpythonnapi()
         console.log(res);
     }
+    useEffect(()=>{
+        callpythonapi()
+    },[])
   return (
     <div>Pythonapi</div>
   )
